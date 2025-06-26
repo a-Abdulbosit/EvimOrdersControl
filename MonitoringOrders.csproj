@@ -12,5 +12,10 @@
 		<PackageReference Include="Google.Apis.Sheets.v4" Version="1.70.0.3819" />
 		<PackageReference Include="Telegram.Bot" Version="20.5.1" />
 	</ItemGroup>
+<ItemGroup>
+  <None Update="evim.json">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+</ItemGroup>
 
 </Project>
