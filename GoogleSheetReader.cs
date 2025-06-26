@@ -22,10 +22,9 @@ namespace MonitoringOrders
             string range = "A2:J";
 
             GoogleCredential credential;
-            using (var stream = new FileStream("C:\\Users\\Zuc\\Desktop\\evim-463210-c19ae84c538c.json", FileMode.Open, FileAccess.Read))
-            {
-                credential = GoogleCredential.FromStream(stream).CreateScoped(Scopes);
-            }
+            var path = Path.Combine(AppContext.BaseDirectory, "evim.json");
+            using var stream = new FileStream(path, FileMode.Open, FileAccess.Read);
+
 
             var service = new SheetsService(new BaseClientService.Initializer()
             {
